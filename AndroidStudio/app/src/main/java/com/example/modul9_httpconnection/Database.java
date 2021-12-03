@@ -27,7 +27,7 @@ public class Database extends AppCompatActivity {
 
     EditText username, password;
     Button btnAdd;
-    private String url = "http://10.0.2.2:8080/mobile/insert.php";
+    private String url = "http://10.0.2.2:80/mobile/insert.php";
     String result;
 
     @Override
@@ -49,7 +49,7 @@ public class Database extends AppCompatActivity {
                     try{
                         String usernameTxt = URLEncoder.encode(username.getText().toString(), "utf-8");
                         String passwordTxt = URLEncoder.encode(password.getText().toString(), "utf-8");
-                        url = "http://10.0.2.2:8080/mobile/insert.php";
+                        url = "http://10.0.2.2:80/mobile/insert.php";
                         url += "?username=" + usernameTxt +"&password=" + passwordTxt;
                         getRequest();
                     } catch (UnsupportedEncodingException e) {
